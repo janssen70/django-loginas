@@ -34,6 +34,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 ```
+* Make sure that the loginas-javacript can be found. E.g. in your static
+* folder, create a symlink:
+
+```sh
+ln -s <path_to_site_packages>/loginas/js static/loginas
+```
 
 * If you're using a custom User model, you'll need to add the template to it so the button shows up:
 
