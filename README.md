@@ -26,7 +26,7 @@ INSTALLED_APPS = [... 'loginas', ...]
 
 * Add the `loginas` URL to your `urls.py`:
 
-```python
+```python…ibility
 # urls.py
 urlpatterns = [
     # from Django 3.2 on, make sure to add loginas urls before the admin site urls, i.e.:
@@ -34,11 +34,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 ```
-* Make sure that the loginas-javacript can be found. E.g. in your static
-* folder, create a symlink:
+* Make sure that the static javacript can be found. [See documentation](https://docs.djangoproject.com/en/5.2/ref/settings/#static-files). Below example uses a symlink:
 
 ```sh
-ln -s <path_to_site_packages>/loginas/js static/loginas
+ln -s <path_to_site_packages>/loginas/static/loginas static/loginas
 ```
 
 * If you're using a custom User model, you'll need to add the template to it so the button shows up:
